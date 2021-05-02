@@ -1,0 +1,9 @@
+.map {
+    width: 800px;
+    height:600px;
+}
+#hello{
+    color: darkcyan;
+    font-family: "Brush Script MT";
+    font-size: 50px;
+}

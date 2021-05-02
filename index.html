@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>CGI Intern</title>
+    <script src="jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+          integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+          crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+            integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+            crossorigin=""></script>
+
+    <script src="https://unpkg.com/elm-pep"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<div id="hello">Sunlight calculator <br>
+</div>
+<span>Insert coordinates or choose a location by clicking on the map. Choose a date and calculate the total amount of sunlight. <br>(If you chose a location on the map and want to enter coordinates manually, click "Remove marker" beforehand)</span>
+
+<div id="forms">
+        <form>
+            <label>Latitude: <input id='lat' value='58.36522699503553'></label>
+            <label>Longitude: <input id='lon' value='26.741190897790407'></label>
+            <label>Date: <input type='date' id='date'></label><br>
+            <button id="calc">Calculate</button>
+        </form>
+    <button onclick="removeMarker()">Remove marker</button>
+
+    <dl id='output'></dl>
+    <span id="totalTime"></span>
+</div>
+<div id="map" class="map"></div>
+</body>
+<script type="text/javascript" src="script.js"></script>
+</html>
